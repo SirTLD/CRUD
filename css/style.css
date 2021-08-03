@@ -5,6 +5,10 @@
           box-sizing: border-box;
 }
 
+body {
+  background-color: #DBE2EF;
+}
+
 .fa-book {
   color: orange;
 }
@@ -14,7 +18,23 @@
   color: #fff;
 }
 
+.fa-edit .fa-delete {
+  font-size: 2rem;
+}
+
 .card {
   width: 25rem;
+}
+
+textarea {
+  outline: none;
+  border: none;
+  height: 10rem;
+  width: 100%;
+  padding-top: 1rem;
+}
+
+.hidden {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

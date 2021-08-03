@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #DBE2EF;
+}
+
 //ADD BUTTONS
 
 .fa-book {
@@ -16,12 +20,29 @@
     color: #fff;
 }
 
-// .far {
-//     margin: 0 1rem;
-// }
+.fa-edit .fa-delete {
+    font-size: 2rem;
+}
 
 //CARD SECTION
 
 .card {
     width: 25rem;
 }
+
+//TEXT AREA
+
+textarea {
+    outline: none;
+    border: none;
+    height: 10rem;
+    width: 100%;
+    padding-top: 1rem;
+    
+    }
+
+
+    .hidden {
+        display: none;
+    }
+
