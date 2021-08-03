@@ -1,32 +1,27 @@
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+//ADD BUTTONS
 
-.d-flex input {
-    margin: 1rem 0;
-    padding: .6rem;
+.fa-book {
+    color: orange;
 }
 
-.d-flex button{
-    margin: 1.2rem .5rem;
-    padding: .6rem 2.2rem;
+.fa-plus-square {
+    // padding: .5rem;
+    font-size: 1.5rem;
+    color: #fff;
 }
 
-.container table {
-    margin: 1rem 10rem;
-}
+// .far {
+//     margin: 0 1rem;
+// }
 
-table .btn-edit {
-    color: green;
-    cursor: pointer;
-    font-size: 1.2rem;
-}
+//CARD SECTION
 
-table .btn-delete {
-    color: red;
-    cursor: pointer;
+.card {
+    width: 25rem;
 }

@@ -11,67 +11,95 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
         integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/style.css">
-    <title>Digital Library</title>
+    <title>Note Taker</title>
 </head>
 
 <body>
 
-    <div class="container text-center">
-        <h1 class="bg-light py-4 text-dark"><i class="fab fa-digital-ocean"></i>Digital Library</h1>
-        
+
+    <div class="container-fluid text-center m-0">
+        <h1 class="bg-light py-4 text-dark"><i class="fas fa-book me-3"></i>Note Taker</h1>
     </div>
 
-    <div class="d-flex justify-content-center mt-5">
-        <form class='w-50'>
-            <input type="text" id='user-id' class="form-control m-0" placeholder="Product ID" autocomplete="off"
-                readonly>
-            <input type="text" id='product-name' class="form-control my-3" placeholder="Product Name"
-                autocomplete="off">
-            <div class="row">
-                <div class="col">
-                    <input type="text" id='seller' class="form-control m-0" placeholder="Seller" autocomplete="off">
+
+    <div class="d-flex justify-content-end m-4">
+        <button class=" btn btn-warning add my-4" id='add'><i class="far fa-plus-square"></i>
+            Add Note
+
+        </button>
+    </div>
+
+
+    <div class="container d-flex card-items">
+
+        <div class="row gap-2 gap-md-5">           
+
+                <div class="card shadow-sm p-2">
+                    <div class="card-body">
+                        <div class="d-flex tools justify-content-end gap-2">
+                            <button class="btn btn-outline-warning"><i class="far fa-edit btn-edit"></i></button>
+                            <button class="btn btn-outline-warning"> <i class="far fa-trash-alt btn-delete"></i></button>
+                        </div>
+                        <h3 class="card-title">Card title</h3>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, assumenda. Nam
+                            saepe tenetur cum aperiam corporis ducimus excepturi illo? Harum!</p>
+                        <a href="#" class="btn btn-warning">Go somewhere</a>
+                    </div>
                 </div>
 
-                <div class="col">
-                    <input type="text" id='price' class="form-control m-0" placeholder="Price" autocomplete="off">
+                <div class="card shadow-sm p-2">
+                    <div class="card-body">
+                        <div class="d-flex tools justify-content-end gap-2">
+                            <button class="btn btn-outline-warning"><i class="far fa-edit btn-edit"></i></button>
+                            <button class="btn btn-outline-warning"> <i class="far fa-trash-alt btn-delete"></i></button>
+                        </div>
+                        <h3 class="card-title">Card title</h3>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, assumenda. Nam
+                            saepe tenetur cum aperiam corporis ducimus excepturi illo? Harum!</p>
+                        <a href="#" class="btn btn-warning">Go somewhere</a>
+                    </div>
+                </div>
+
+                <div class="card shadow-sm p-2">
+                    <div class="card-body">
+                        <div class="d-flex tools justify-content-end gap-2">
+                            <button class="btn btn-outline-warning"><i class="far fa-edit btn-edit"></i></button>
+                            <button class="btn btn-outline-warning"> <i class="far fa-trash-alt btn-delete"></i></button>
+                        </div>
+                        <h3 class="card-title">Card title</h3>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, assumenda. Nam
+                            saepe tenetur cum aperiam corporis ducimus excepturi illo? Harum!</p>
+                        <a href="#" class="btn btn-warning">Go somewhere</a>
+                    </div>
+                </div>
+    
+                
+
+           
+
+            
+
+           
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!--              <div class="note">
+                <div class="tools">
+                    <button>  <i class="far fa-edit btn-edit"></i></button>
+                    <button> <i class="far fa-trash-alt btn-delete"></i></button>
                 </div>
             </div>
-        </form>
-    </div>
 
+            <div class="note-section">
+                <textarea></textarea>
+            </div> -->
 
-    <div class="d-flex justify-content-center my-3">
-        <button class="btn btn-light" id='btn-create'>Create</button>
-        <button class="btn btn-light" id='btn-read'>Read</button>
-        <button class="btn btn-light" id='btn-update'>Update</button>
-        <button class="btn btn-light" id='btn-delete'>Delete All</button>
-    </div>
-
-    <div class="container d-flex">
-        <table class="table table-default table-hover">
-            <thead>
-                <tr>
-                    <th scope="col">#ID</th>
-                    <th scope="col">Product Name</th>
-                    <th scope="col">Seller</th>
-                    <th scope="col">Price</th>
-                    <th scope="col">Edit</th>
-                    <th scope="col">Delete</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td><i class="far fa-edit btn-edit"></i></td>
-                    <td><i class="far fa-trash-alt btn-delete"></i></td>
-                </tr>
-           
-            </tbody>
-        </table>
-    </div>
 
 
     <!-- JavaScript Bundle with Popper -->

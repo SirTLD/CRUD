@@ -5,28 +5,16 @@
           box-sizing: border-box;
 }
 
-.d-flex input {
-  margin: 1rem 0;
-  padding: .6rem;
+.fa-book {
+  color: orange;
 }
 
-.d-flex button {
-  margin: 1.2rem .5rem;
-  padding: .6rem 2.2rem;
+.fa-plus-square {
+  font-size: 1.5rem;
+  color: #fff;
 }
 
-.container table {
-  margin: 1rem 10rem;
-}
-
-table .btn-edit {
-  color: green;
-  cursor: pointer;
-  font-size: 1.2rem;
-}
-
-table .btn-delete {
-  color: red;
-  cursor: pointer;
+.card {
+  width: 25rem;
 }
 /*# sourceMappingURL=style.css.map */
