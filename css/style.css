@@ -18,23 +18,28 @@ body {
   color: #fff;
 }
 
-.fa-edit .fa-delete {
-  font-size: 2rem;
+.fa-edit, .fa-trash-alt {
+  font-size: 1.3rem;
+  color: #fff;
 }
 
 .card {
   width: 25rem;
 }
 
+input {
+  border: none;
+  font-size: 2rem;
+  width: 100%;
+  outline: none;
+}
+
 textarea {
   outline: none;
   border: none;
-  height: 10rem;
+  height: 12rem;
   width: 100%;
   padding-top: 1rem;
-}
-
-.hidden {
-  display: none;
+  resize: none;
 }
 /*# sourceMappingURL=style.css.map */

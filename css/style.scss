@@ -20,8 +20,9 @@ body {
     color: #fff;
 }
 
-.fa-edit .fa-delete {
-    font-size: 2rem;
+.fa-edit,.fa-trash-alt {
+    font-size: 1.3rem;
+    color: #fff;
 }
 
 //CARD SECTION
@@ -30,19 +31,29 @@ body {
     width: 25rem;
 }
 
+//INPUT
+
+input {
+    border: none;
+    font-size: 2rem;
+    width: 100%;
+    outline: none;
+}
+
 //TEXT AREA
 
 textarea {
     outline: none;
     border: none;
-    height: 10rem;
+    height: 12rem;
     width: 100%;
     padding-top: 1rem;
+    resize: none;
     
     }
 
 
-    .hidden {
-        display: none;
-    }
+    // .hidden {
+    //     display: none;
+    // }
 
