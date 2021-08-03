@@ -1,6 +1,6 @@
 const createBtn = document.getElementById('add');
 
-createBtn.addEventListener('click', () => addEntry());
+createBtn.addEventListener('click', () => addEntry('Testing'));
 
 let addEntry = (text = '') => {
   const entry = document.createElement('div');
@@ -16,7 +16,9 @@ let addEntry = (text = '') => {
      
       <input class='card-title'type="text" placeholder="Title">
       <div class="${text ? '' : 'hidden'} main">
-          <textarea class="${text ? 'hidden' : ''}"card-text main">
+          <textarea class="${
+            text ? 'hidden' : ''
+          }"card-text main" placeholder="Message">
 
          
           
@@ -32,8 +34,17 @@ let addEntry = (text = '') => {
   const main = entry.querySelector('.main');
   const textArea = entry.querySelector('textarea');
 
+  textArea.value = text;
+
+  // main.innerHTML = marked(text)
+
   deleteBtn.addEventListener('click', () => {
     entry.remove();
+  });
+
+  editBtn.addEventListener('click', () => {
+    main.classList.toggle('hidden');
+    textArea.classList.toggle('hidden');
   });
 
   let cardParent = document.getElementById('card-container-body');
