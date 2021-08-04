@@ -20,10 +20,21 @@ body {
     color: #fff;
 }
 
-.fa-edit,.fa-trash-alt {
-    font-size: 1.3rem;
-    color: #fff;
+button {
+    
+    .fa-edit,.fa-trash-alt {
+        font-size: 1.3rem;
+        color: orange;   
+           }
+
+    &:hover {
+        .fa-edit,.fa-trash-alt {            
+            color: #fff;       
+                   }
+    }
+
 }
+
 
 //CARD SECTION
 
@@ -45,15 +56,14 @@ input {
 textarea {
     outline: none;
     border: none;
-    height: 12rem;
+    min-height: 10rem;
     width: 100%;
-    padding-top: 1rem;
     resize: none;
     
     }
 
 
-    // .hidden {
-    //     display: none;
-    // }
+    .hidden {
+        display: none;
+    }
 

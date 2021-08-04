@@ -1,45 +1,65 @@
-const createBtn = document.getElementById('add');
+//TARGETING THE ADD BUTTON & SETTING AN EVENT
 
-createBtn.addEventListener('click', () => addEntry('Testing'));
+const addBtn = document.getElementById('add');
 
-let addEntry = (text = '') => {
-  const entry = document.createElement('div');
-  entry.classList.add('entry');
-  entry.innerHTML = `
+const notes = JSON.parse(localStorage.getItem('notes'));
+
+if (notes) {
+  notes.forEach((note) => addNote(note));
+}
+
+addBtn.addEventListener('click', () => addNote(''));
+
+//DEFINING THE ADD NOTE FUNCTION
+
+function addNote(text = '') {
+  const note = document.createElement('div');
+  note.classList.add('note');
+
+  note.innerHTML = `
 
   <div class="card shadow-sm p-2">
-  <div class="card-body">
-      <div class="d-flex tools justify-content-end gap-2">
-          <button class="btn btn-warning"><i class="far fa-edit btn-edit"></i></button>
-          <button class="btn btn-warning"> <i class="far fa-trash-alt btn-delete"></i></button>
-      </div>
-     
-      <input class='card-title'type="text" placeholder="Title">
-      <div class="${text ? '' : 'hidden'} main">
-          <textarea class="${
-            text ? 'hidden' : ''
-          }"card-text main" placeholder="Message">
+      <div class="card-body">
+          <div class="d-flex tools justify-content-end gap-2">
+              <button class="btn btn-outline-warning"><i class="far fa-edit btn-edit"></i></button>
+              <button class="btn btn-outline-warning"> <i class="far fa-trash-alt btn-delete"></i></button>
+          </div>
 
-         
-          
-          </textarea>
-      </div>                        
-      <a href="#" class="btn btn-warning">Go somewhere</a>
+          <div class="main ${text ? '' : 'hidden'}">
+          </div>
+          <textarea class=" py-4 card-text ${
+            text ? 'hidden' : ''
+          }" placeholder='Message'></textarea>
+      </div>
   </div>
-</div>
+ 
+
   `;
 
-  const deleteBtn = entry.querySelector('.btn-delete');
-  const editBtn = entry.querySelector('.btn-edit');
-  const main = entry.querySelector('.main');
-  const textArea = entry.querySelector('textarea');
+  //TARGETING THE PARENT BODY
+
+  // let cardParent = document.getElementById('card-container-body');
+
+  let cardParent = document.querySelector('.row');
+
+  //TARGETING THE ELEMENTS
+
+  const deleteBtn = note.querySelector('.btn-delete');
+  const editBtn = note.querySelector('.btn-edit');
+  const main = note.querySelector('.main');
+  const textArea = note.querySelector('textarea');
+
+  //TARGETING TEXT AREA
 
   textArea.value = text;
+  main.innerHTML = text;
 
-  // main.innerHTML = marked(text)
+  //DELETING A NOTE
 
   deleteBtn.addEventListener('click', () => {
-    entry.remove();
+    note.remove();
+
+    updateStorage();
   });
 
   editBtn.addEventListener('click', () => {
@@ -47,15 +67,25 @@ let addEntry = (text = '') => {
     textArea.classList.toggle('hidden');
   });
 
-  let cardParent = document.getElementById('card-container-body');
-  cardParent.appendChild(entry);
-};
+  //EVENTLISTENER ON TEXTAREA
+
+  textArea.addEventListener('input', (e) => {
+    const { value } = e.target;
+
+    main.innerHTML = value;
+    updateStorage();
+  });
+
+  //ADDING NEW DIV TO PARENT
+
+  cardParent.appendChild(note);
+}
+
+//INTERACTING WITH LOCAL STORAGE
 
 function updateStorage() {
-  let notesText = document.querySelectorAll('textarea');
-  let notes = [];
-
+  const notesText = document.querySelectorAll('textarea');
+  const notes = [];
   notesText.forEach((note) => notes.push(note.value));
-
   localStorage.setItem('notes', JSON.stringify(notes));
 }

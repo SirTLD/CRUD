@@ -18,8 +18,12 @@ body {
   color: #fff;
 }
 
-.fa-edit, .fa-trash-alt {
+button .fa-edit, button .fa-trash-alt {
   font-size: 1.3rem;
+  color: orange;
+}
+
+button:hover .fa-edit, button:hover .fa-trash-alt {
   color: #fff;
 }
 
@@ -37,9 +41,12 @@ input {
 textarea {
   outline: none;
   border: none;
-  height: 12rem;
+  min-height: 10rem;
   width: 100%;
-  padding-top: 1rem;
   resize: none;
+}
+
+.hidden {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */
