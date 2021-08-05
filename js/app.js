@@ -10,14 +10,6 @@ if (notes) {
 
 addBtn.addEventListener('click', () => addNote(''));
 
-//CLEARING STORAGE
-
-const deleteAll = document.getElementById('delete-all');
-
-deleteAll.addEventListener('click', () => {
-  console.log('i was clicked');
-});
-
 //DEFINING THE ADD NOTE FUNCTION
 
 function addNote(text = '') {
