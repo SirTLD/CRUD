@@ -16,15 +16,15 @@ function addNote(text = '') {
   const note = document.createElement('div');
   note.classList.add('note');
   note.classList.add('col-md');
-  note.classList.add('col-sm');
+  // note.classList.add('my-sm-2');
 
   note.innerHTML = `
 
-  <div class="card shadow-sm p-2">
+  <div class="card my-2 shadow-sm p-2">
       <div class="card-body">
           <div class="d-flex tools justify-content-end gap-2">
-              <button class="btn btn-outline-warning"><i class="far btn-style fa-edit btn-edit"></i></button>
-              <button class="btn btn-outline-warning"> <i class="far btn-style fa-trash-alt btn-delete"></i></button>
+              <button class="btn btn-outline-warning btn-edit"><i class="far btn-style fa-edit"></i></button>
+              <button class="btn btn-outline-warning btn-delete"> <i class="far btn-style fa-trash-alt"></i></button>
           </div>
 
           <div class="main ${text ? '' : 'hidden'}">
