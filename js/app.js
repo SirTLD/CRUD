@@ -27,20 +27,15 @@ function addNote(text = '') {
               <button class="btn btn-outline-warning btn-delete"> <i class="far btn-style fa-trash-alt"></i></button>
           </div>
 
-          <div class="main ${text ? '' : 'hidden'}">
+          <div class="py-4 main ${text ? '' : 'hidden'}">
           </div>
           <textarea class=" py-4 card-text ${
             text ? 'hidden' : ''
           }" placeholder='Message'></textarea>
       </div>
- 
- 
-
   `;
 
   //TARGETING THE PARENT BODY
-
-  // let cardParent = document.getElementById('card-container-body');
 
   let cardParent = document.querySelector('.row');
 
@@ -54,7 +49,7 @@ function addNote(text = '') {
   //TARGETING TEXT AREA
 
   textArea.value = text;
-  main.innerHTML = text;
+  main.innerHTML = marked(text);
 
   //DELETING A NOTE
 
@@ -74,7 +69,7 @@ function addNote(text = '') {
   textArea.addEventListener('input', (e) => {
     const { value } = e.target;
 
-    main.innerHTML = value;
+    main.innerHTML = marked(value);
     updateStorage();
   });
 
