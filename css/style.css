@@ -18,12 +18,17 @@ body {
   color: #fff;
 }
 
-button .fa-edit, button .fa-trash-alt {
+.trash-all-btn {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.btn .btn-style {
   font-size: 1.3rem;
   color: orange;
 }
 
-button:hover .fa-edit, button:hover .fa-trash-alt {
+.btn:hover .btn-style {
   color: #fff;
 }
 

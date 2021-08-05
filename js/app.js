@@ -10,19 +10,29 @@ if (notes) {
 
 addBtn.addEventListener('click', () => addNote(''));
 
+//CLEARING STORAGE
+
+const deleteAll = document.getElementById('delete-all');
+
+deleteAll.addEventListener('click', () => {
+  console.log('i was clicked');
+});
+
 //DEFINING THE ADD NOTE FUNCTION
 
 function addNote(text = '') {
   const note = document.createElement('div');
   note.classList.add('note');
+  note.classList.add('col-md');
+  note.classList.add('col-sm');
 
   note.innerHTML = `
 
   <div class="card shadow-sm p-2">
       <div class="card-body">
           <div class="d-flex tools justify-content-end gap-2">
-              <button class="btn btn-outline-warning"><i class="far fa-edit btn-edit"></i></button>
-              <button class="btn btn-outline-warning"> <i class="far fa-trash-alt btn-delete"></i></button>
+              <button class="btn btn-outline-warning"><i class="far btn-style fa-edit btn-edit"></i></button>
+              <button class="btn btn-outline-warning"> <i class="far btn-style fa-trash-alt btn-delete"></i></button>
           </div>
 
           <div class="main ${text ? '' : 'hidden'}">
@@ -31,7 +41,7 @@ function addNote(text = '') {
             text ? 'hidden' : ''
           }" placeholder='Message'></textarea>
       </div>
-  </div>
+ 
  
 
   `;
